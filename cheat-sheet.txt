@@ -1,0 +1,2 @@
+COMPILAR: mpicc example.c -o example
+RODAR: mpirun -np 1 example

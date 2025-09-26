@@ -1,0 +1,24 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"label": "Run MPI Script",
+			"type": "shell",
+			"command": "${workspaceFolder}/run.sh",
+			"args": ["${file}", "${input:npProcesses}"],
+			"problemMatcher": [],
+			"presentation": {
+				"reveal": "always",
+				"panel": "shared"
+			}
+		}
+	],
+	"inputs": [
+		{
+			"id": "npProcesses",
+			"type": "pickString",
+			"description": "Número de processos",
+			"options": ["1", "2", "3", "4", "5", "6", "7", "8"]
+		}
+	]
+}
