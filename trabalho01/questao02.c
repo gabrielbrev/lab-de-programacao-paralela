@@ -26,7 +26,6 @@ int main(int argc, char** argv) {
 
     // Mestre (rank 0) inicializa o vetor completo.
     if (my_rank == 0) {
-        printf("\nVersao B: Mestre/Escravo com Coletivas (%d processos)\n", num_procs);
         for (int i = 0; i < TAMANHO_VETOR; i++) {
             vetor_global[i] = i + 1;
         }
