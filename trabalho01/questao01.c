@@ -4,7 +4,7 @@
 
 int main(int argc, char** argv) {
     int my_rank, num_procs;
-    const int TAMANHO_VETOR = 10;
+    const int TAMANHO_VETOR = 12;
     int vet[TAMANHO_VETOR];
     double start_time, end_time;
 

@@ -2,7 +2,7 @@
 #include <time.h>
 
 int main () {
-    int x, soma=0, subtracao=0, mult=1, TAM = 10;
+    int x, soma = 0, subtracao = 0, mult = 1, TAM = 12;
     int vet[TAM];
     clock_t inicio, fim;
     double tempo_execucao;

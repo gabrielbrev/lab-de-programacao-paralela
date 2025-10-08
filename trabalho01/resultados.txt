@@ -1,0 +1,54 @@
+BASE
+ *  Executing task: '/Users/gabrielbrevilieri/Documents/UFF/Disciplinas/Lab. de Programacao Paralela/run.sh' '/Users/gabrielbrevilieri/Documents/UFF/Disciplinas/Lab. de Programacao Paralela/trabalho01/base.c' 1  
+
+vet[0] = 1
+vet[1] = 2
+vet[2] = 3
+vet[3] = 4
+vet[4] = 5
+vet[5] = 6
+vet[6] = 7
+vet[7] = 8
+vet[8] = 9
+vet[9] = 10
+vet[10] = 11
+vet[11] = 12
+Soma = 78
+Subtracao = -78
+Multiplicacao = 479001600
+Tempo de execucao: 0.000020 segundos
+ *  Terminal will be reused by tasks, press any key to close it. 
+
+QUESTAO 1 - 4 PROCS
+ *  Executing task: '/Users/gabrielbrevilieri/Documents/UFF/Disciplinas/Lab. de Programacao Paralela/run.sh' '/Users/gabrielbrevilieri/Documents/UFF/Disciplinas/Lab. de Programacao Paralela/trabalho01/questao01.c' 4  
+
+Resultados Finais:
+Soma = 78
+Subtracao = -78
+Multiplicacao = 479001600
+Tempo de Execucao: 0.000080 segundos
+ *  Terminal will be reused by tasks, press any key to close it. 
+
+QUESTAO 2 - 4 PROCS
+ *  Executing task: '/Users/gabrielbrevilieri/Documents/UFF/Disciplinas/Lab. de Programacao Paralela/run.sh' '/Users/gabrielbrevilieri/Documents/UFF/Disciplinas/Lab. de Programacao Paralela/trabalho01/questao02.c' 4  
+
+
+Resultados Finais:
+Soma = 78
+Subtracao = -78
+Multiplicacao = 479001600
+Tempo de Execucao: 0.000283 segundos
+ *  Terminal will be reused by tasks, press any key to close it. 
+
+QUESTAO 3 - 4 PROCS
+ *  Executing task: '/Users/gabrielbrevilieri/Documents/UFF/Disciplinas/Lab. de Programacao Paralela/run.sh' '/Users/gabrielbrevilieri/Documents/UFF/Disciplinas/Lab. de Programacao Paralela/trabalho01/questao03.c' 4  
+
+
+Resultados Finais:
+Soma = 78
+Subtracao = -78
+Multiplicacao = 479001600
+Tempo de Execucao: 0.000145 segundos
+ *  Terminal will be reused by tasks, press any key to close it. 
+
+TODOS COM VETOR TAMANHO 12
