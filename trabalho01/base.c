@@ -2,7 +2,8 @@
 #include <time.h>
 
 int main () {
-    int x, soma = 0, subtracao = 0, mult = 1, TAM = 12;
+    int x, soma = 0, subtracao = 0, TAM = 1200;
+    long long int mult = 1;
     int vet[TAM];
     clock_t inicio, fim;
     double tempo_execucao;
@@ -14,7 +15,7 @@ int main () {
     }
 
     for (x = 0; x < TAM; x++) {
-        printf("vet[%d] = %d\n", x, vet[x]);    
+        // printf("vet[%d] = %d\n", x, vet[x]);    
     }
     
     for (x = 0; x < TAM; x++) {
@@ -28,6 +29,6 @@ int main () {
     
     printf("Soma = %d\n", soma);
     printf("Subtracao = %d\n", subtracao);
-    printf("Multiplicacao = %d\n", mult);
+    printf("Multiplicacao = %lld\n", mult);
     printf("Tempo de execucao: %f segundos\n", tempo_execucao);
 }
