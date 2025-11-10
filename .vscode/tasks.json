@@ -4,8 +4,19 @@
 		{
 			"label": "Run MPI Script",
 			"type": "shell",
-			"command": "${workspaceFolder}/run.sh",
+			"command": "${workspaceFolder}/mpi/run.sh",
 			"args": ["${file}", "${input:npProcesses}", "${input:programArgs}"],
+			"problemMatcher": [],
+			"presentation": {
+				"reveal": "always",
+				"panel": "shared"
+			}
+		},
+		{
+			"label": "Run OpenMP Script",
+			"type": "shell",
+			"command": "${workspaceFolder}/openmp/run.sh",
+			"args": ["${file}", "${input:programArgs}"],
 			"problemMatcher": [],
 			"presentation": {
 				"reveal": "always",
