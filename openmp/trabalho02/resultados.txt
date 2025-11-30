@@ -1,0 +1,77 @@
+ *  Executing task: '/Users/gabrielbrevilieri/Documents/UFF/Disciplinas/Lab. de Programacao Paralela/openmp/run.sh' '/Users/gabrielbrevilieri/Documents/UFF/Disciplinas/Lab. de Programacao Paralela/openmp/trabalho02/mult_matrizes.c'  
+
+Calculando tempo sequencial (1 thread)
+
+Tempo sequencial: 4.988249 segundos
+
+-----------------------------------------------------------------
+Testes com 2 threads:
+-----------------------------------------------------------------
+  Escalonamento static    : 2.343374 segundos (média de 10 execuções)
+  Escalonamento dynamic   : 2.253498 segundos (média de 10 execuções)
+  Escalonamento guided    : 2.279728 segundos (média de 10 execuções)
+
+-----------------------------------------------------------------
+Testes com 4 threads:
+-----------------------------------------------------------------
+  Escalonamento static    : 1.313871 segundos (média de 10 execuções)
+  Escalonamento dynamic   : 1.384690 segundos (média de 10 execuções)
+  Escalonamento guided    : 1.386352 segundos (média de 10 execuções)
+
+-----------------------------------------------------------------
+Testes com 8 threads:
+-----------------------------------------------------------------
+  Escalonamento static    : 1.249536 segundos (média de 10 execuções)
+  Escalonamento dynamic   : 1.247362 segundos (média de 10 execuções)
+  Escalonamento guided    : 1.273655 segundos (média de 10 execuções)
+
+-----------------------------------------------------------------
+Testes com 16 threads:
+-----------------------------------------------------------------
+  Escalonamento static    : 1.322250 segundos (média de 10 execuções)
+  Escalonamento dynamic   : 1.454499 segundos (média de 10 execuções)
+  Escalonamento guided    : 1.561622 segundos (média de 10 execuções)
+
+=================================================================
+ANÁLISE DE DESEMPENHO
+=================================================================
+
+Tempo Sequencial (1 thread): 4.988249 segundos
+
+-----------------------------------------------------------------
+Threads: 2
+-----------------------------------------------------------------
+Escalonamento | Tempo (s)    | Speedup    | Eficiência
+-----------------------------------------------------------------
+static       |     2.343374 |       2.13 |    106.43%
+dynamic      |     2.253498 |       2.21 |    110.68%
+guided       |     2.279728 |       2.19 |    109.40%
+
+-----------------------------------------------------------------
+Threads: 4
+-----------------------------------------------------------------
+Escalonamento | Tempo (s)    | Speedup    | Eficiência
+-----------------------------------------------------------------
+static       |     1.313871 |       3.80 |     94.92%
+dynamic      |     1.384690 |       3.60 |     90.06%
+guided       |     1.386352 |       3.60 |     89.95%
+
+-----------------------------------------------------------------
+Threads: 8
+-----------------------------------------------------------------
+Escalonamento | Tempo (s)    | Speedup    | Eficiência
+-----------------------------------------------------------------
+static       |     1.249536 |       3.99 |     49.90%
+dynamic      |     1.247362 |       4.00 |     49.99%
+guided       |     1.273655 |       3.92 |     48.96%
+
+-----------------------------------------------------------------
+Threads: 16
+-----------------------------------------------------------------
+Escalonamento | Tempo (s)    | Speedup    | Eficiência
+-----------------------------------------------------------------
+static       |     1.322250 |       3.77 |     23.58%
+dynamic      |     1.454499 |       3.43 |     21.43%
+guided       |     1.561622 |       3.19 |     19.96%
+
+ *  Terminal will be reused by tasks, press any key to close it. 

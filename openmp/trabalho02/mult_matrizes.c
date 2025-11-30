@@ -93,11 +93,12 @@ int main() {
     char *schedule_types[] = {"static", "dynamic", "guided"};
     int num_schedule_types = 3;
     
-    printf("=================================================================\n");
-    printf("Multiplicação de Matrizes Paralela com OpenMP\n");
-    printf("Tamanho das matrizes: %d x %d\n", N, N);
-    printf("Número de execuções por teste: %d\n", NUM_EXECUTIONS);
-    printf("=================================================================\n\n");
+    // Armazenar resultados para cálculo de speedup e eficiencia
+    double results[num_thread_tests][num_schedule_types];
+    
+    printf("Calculando tempo sequencial (1 thread)\n\n");
+    double sequential_time = run_test(A, B, C, N, 1, "static");
+    printf("Tempo sequencial: %.6f segundos\n\n", sequential_time);
     
     for (int t = 0; t < num_thread_tests; t++) {
         int num_threads = thread_counts[t];
@@ -110,18 +111,40 @@ int main() {
             char *schedule_type = schedule_types[s];
             
             double avg_time = run_test(A, B, C, N, num_threads, schedule_type);
+            results[t][s] = avg_time;
             
-            printf("  Escalonamento %-10s: %.6f segundos (média de %d execuções)\n", 
-                   schedule_type, avg_time, NUM_EXECUTIONS);
+            printf("  Escalonamento %-10s: %.6f segundos (média de %d execuções)\n", schedule_type, avg_time, NUM_EXECUTIONS);
         }
         printf("\n");
     }
     
     printf("=================================================================\n");
-    printf("Verificação do resultado (amostra):\n");
-    printf("C[0][0] = %.0f (esperado: %d)\n", C[0][0], N);
-    printf("C[%d][%d] = %.0f (esperado: %d)\n", N-1, N-1, C[N-1][N-1], N);
-    printf("=================================================================\n");
+    printf("ANÁLISE DE DESEMPENHO\n");
+    printf("=================================================================\n\n");
+    
+    printf("Tempo Sequencial (1 thread): %.6f segundos\n\n", sequential_time);
+    
+    for (int t = 0; t < num_thread_tests; t++) {
+        int num_threads = thread_counts[t];
+        
+        printf("-----------------------------------------------------------------\n");
+        printf("Threads: %d\n", num_threads);
+        printf("-----------------------------------------------------------------\n");
+        printf("%-12s | %-12s | %-10s | %-10s\n", 
+               "Escalonamento", "Tempo (s)", "Speedup", "Eficiência");
+        printf("-----------------------------------------------------------------\n");
+        
+        for (int s = 0; s < num_schedule_types; s++) {
+            char *schedule_type = schedule_types[s];
+            double time = results[t][s];
+            double speedup = sequential_time / time;
+            double efficiency = (speedup / num_threads) * 100.0;
+            
+            printf("%-12s | %12.6f | %10.2f | %9.2f%%\n", 
+                   schedule_type, time, speedup, efficiency);
+        }
+        printf("\n");
+    }
     
     free_matrix(A, N);
     free_matrix(B, N);
